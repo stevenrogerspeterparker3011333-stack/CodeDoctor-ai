@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeDoctor AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header>
+      <nav class="navbar container">
+        <div class="logo">CodeDoctor AI</div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="auth-btn">Login / Sign Up</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container" id="home">
+        <div class="hero-heading">
+          <h1>CodeDoctor AI</h1>
+          <p>Fix Your Code Instantly with AI Precision</p>
+        </div>
+
+        <div class="workspace">
+          <article class="panel input-panel glass-card">
+            <div class="panel-header">
+              <h2>Code Input</h2>
+              <span class="status">Ready</span>
+            </div>
+            <label for="codeInput" class="sr-only">Paste your code</label>
+            <textarea id="codeInput" placeholder="Paste your Python, JavaScript, C++, or Java code here..."></textarea>
+            <div class="panel-actions">
+              <button id="diagnoseBtn" class="primary-btn">Diagnose Code</button>
+              <button id="clearBtn" class="secondary-btn">Clear</button>
+            </div>
+          </article>
+
+          <article class="panel output-panel glass-card">
+            <div class="panel-header">
+              <h2>AI Diagnosis</h2>
+              <span class="status" id="analysisState">Waiting</span>
+            </div>
+            <div id="loadingState" class="loading hidden" aria-live="polite">
+              <span class="loader"></span>
+              <p>Analyzing your code with CodeDoctor AI...</p>
+            </div>
+            <div id="outputContent" class="output-content">
+              <p class="muted">Your AI-powered feedback will appear here.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <h2>Powerful AI Features</h2>
+        <div class="feature-grid">
+          <article class="feature-card glass-card">
+            <h3>AI Error Detection</h3>
+            <p>Automatically identify syntax issues, runtime risks, and logic mistakes before they break your app.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <h3>Smart Debug Suggestions</h3>
+            <p>Get context-aware fixes and practical recommendations to resolve bugs faster and cleaner.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <h3>Code Optimization Tips</h3>
+            <p>Improve performance, readability, and maintainability with modern coding best practices.</p>
+          </article>
+          <article class="feature-card glass-card">
+            <h3>Multi-language Support</h3>
+            <p>Works seamlessly with Python, JavaScript, C++, and Java workflows.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="about">
+      <div class="container footer-content">
+        <a href="#about">About</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>© <span id="year"></span> CodeDoctor AI. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
